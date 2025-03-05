@@ -52,7 +52,7 @@ class DQN(nn.Module):
 
 class ReplayMemory():
     """
-    Memória de Replay para armazenar experiências do agente.
+    Replay memory para armazenar experiências do agente.
     """
     def __init__(self, maxlen):
         self.memory = deque([], maxlen=maxlen)
@@ -80,7 +80,7 @@ class GymTrading():
 
     def train(self, episodes, data_train, p=1.0, z=0.01, c=0.5, window=1):
         """
-        Treina o agente usando aprendizado por reforço Deep Q-Learning.
+        Treina o agente usando Deep Q-Learning.
         """
         env_train = gym.make(
             "TradingEnv",
